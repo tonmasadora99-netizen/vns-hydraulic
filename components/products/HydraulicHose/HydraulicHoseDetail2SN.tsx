@@ -71,7 +71,7 @@ export default function HydraulicHoseDetail2SN() {
               <div className="relative aspect-square overflow-hidden rounded-3xl border-2 border-[#af0000] p-1 shadow-[0_20px_50px_rgba(0,0,0,0.2)] bg-white">
                 <div className="relative h-full w-full overflow-hidden rounded-[1.4rem]">
                   <Image
-                    src="/products/products/Hydralic Hose2.png"
+                    src="/products/products/2_SN-removebg-preview.png"
                     alt="Hydraulic Hose 2SN"
                     fill
                     sizes="(max-width: 1024px) 100vw, 480px"
