@@ -28,7 +28,7 @@ export async function generateMetadata({
     Metadata: { homeTitle: string; homeDescription: string };
   };
 
-  const baseUrl = "https://vns-engineering.com";
+  const baseUrl = "https://vnshydraulic.com";
 
   return {
     title: messages.Metadata.homeTitle,
