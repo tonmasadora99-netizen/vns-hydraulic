@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ProductDetail from "@/components/products/หัวสายสแตนเลส 304/ProductDetail";
 import ProductSpecs from "@/components/products/หัวสายสแตนเลส 304/ProductSpecs";
@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const baseUrl = "https://vns-engineering.com";
+  const baseUrl = "https://vnshydraulic.com";
   return {
     title: t("stainless304Title"),
     description: t("stainless304Description"),

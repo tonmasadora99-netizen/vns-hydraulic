@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ProductMenu from "@/components/about/ProductMenu";
 import Toyox from "@/components/products/Toyox/Toyox";
@@ -11,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const baseUrl = "https://vns-engineering.com";
+  const baseUrl = "https://vnshydraulic.com";
   return {
     title: t("toyoxTitle"),
     description: t("toyoxDescription"),

@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ProductMenu from "@/components/about/ProductMenu";
 import PTFETeflonHoseDetail from "@/components/products/PTFETeflonHose/PTFETeflonHoseDetail";
@@ -14,7 +14,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const baseUrl = "https://vns-engineering.com";
+  const baseUrl = "https://vnshydraulic.com";
   return {
     title: t("ptfeHoseTitle"),
     description: t("ptfeHoseDescription"),
@@ -30,7 +30,7 @@ export default function PTFETeflonHosePage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "สายเทฟลอน PTFE Teflon Hose R14",
-    "image": "https://vns-engineering.com/products/products/PTFE.png",
+    "image": "https://vnshydraulic.com/products/products/PTFE.png",
     "description": "สายเทฟลอน (PTFE Teflon Hose) ชนิดเรียบและชนิดลอน (Convoluted) ถักสแตนเลส ทนเคมีและทนความร้อนสูง",
     "brand": {
       "@type": "Brand",

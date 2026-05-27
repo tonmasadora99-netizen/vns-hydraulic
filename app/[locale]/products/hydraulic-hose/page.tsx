@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ProductMenu from "@/components/about/ProductMenu";
 import HydraulicHoseDetail from "@/components/products/HydraulicHose/HydraulicHoseDetail";
@@ -29,7 +29,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const baseUrl = "https://vns-engineering.com";
+  const baseUrl = "https://vnshydraulic.com";
   return {
     title: t("hydraulicHoseTitle"),
     description: t("hydraulicHoseDescription"),
@@ -45,7 +45,7 @@ export default function HydraulicHosePage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "สายไฮดรอลิคแรงดันสูง (Hydraulic Hose) V.N.S Engineering",
-    "image": "https://vns-engineering.com/products/products/HYDRAULIC%20HOSE.png",
+    "image": "https://vnshydraulic.com/products/products/HYDRAULIC%20HOSE.png",
     "description": "จำหน่ายและประกอบสายไฮดรอลิคแรงดันสูง 1SN, 2SN, 4SP, 4SH มาตรฐาน DIN EN 853/856 คุณภาพสูง ทนแรงดันสูง 3000-4000 PSI",
     "brand": {
       "@type": "Brand",

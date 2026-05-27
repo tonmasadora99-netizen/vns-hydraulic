@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import ProductMenu from "@/components/about/ProductMenu";
 import TubeFittings from "@/components/products/TubeFittings/TubeFittings";
@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const baseUrl = "https://vns-engineering.com";
+  const baseUrl = "https://vnshydraulic.com";
   return {
     title: t("tubeFittingsTitle"),
     description: t("tubeFittingsDescription"),
