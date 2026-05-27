@@ -40,6 +40,9 @@ export async function generateMetadata({
         en: `${baseUrl}/en`,
       },
     },
+    verification: {
+      google: "OhTBrzwg9OprrFzPrNaT-S--4-JGrqvmVbk7EAz9SAw",
+    },
   };
 }
 
