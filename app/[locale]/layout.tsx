@@ -7,6 +7,13 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import HeroBanner from "@/components/HeroBanner";
+import {
+  baseUrl,
+  brandIcons,
+  logoUrl,
+  ogImageUrl,
+  siteName,
+} from "@/lib/brand-metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,17 +35,40 @@ export async function generateMetadata({
     Metadata: { homeTitle: string; homeDescription: string };
   };
 
-  const baseUrl = "https://vnshydraulic.com";
-
   return {
+    metadataBase: new URL(baseUrl),
     title: messages.Metadata.homeTitle,
     description: messages.Metadata.homeDescription,
+    applicationName: siteName,
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
         th: `${baseUrl}/th`,
         en: `${baseUrl}/en`,
       },
+    },
+    icons: brandIcons,
+    openGraph: {
+      type: "website",
+      locale,
+      siteName,
+      title: messages.Metadata.homeTitle,
+      description: messages.Metadata.homeDescription,
+      url: `${baseUrl}/${locale}`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${siteName} logo`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.Metadata.homeTitle,
+      description: messages.Metadata.homeDescription,
+      images: [ogImageUrl],
     },
     verification: {
       google: "OhTBrzwg9OprrFzPrNaT-S--4-JGrqvmVbk7EAz9SAw",
